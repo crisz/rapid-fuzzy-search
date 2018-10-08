@@ -1,0 +1,26 @@
+{
+  "name": "rapid-fuzzy-search",
+  "version": "1.0.0",
+  "description": "A unbelievably fast js implementation of fuzzy-search feature",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisz/rapid-fuzzy-search.git"
+  },
+  "keywords": [
+    "fuzzy-search",
+    "search",
+    "words",
+    "dictionary",
+    "dict-search"
+  ],
+  "author": "crisz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crisz/rapid-fuzzy-search/issues"
+  },
+  "homepage": "https://github.com/crisz/rapid-fuzzy-search#readme"
+}
