@@ -3,8 +3,20 @@ const fs = require('fs');
 const dict = [];
 let words;
 
-module.exports.init = function() {
-    words = fs.readFileSync('./assets/ita.txt').toString().split('\n')
+module.exports.fromFile = function(filepPath) {
+    words = fs.readFileSync('./assets/ita.txt').toString().split('\n');
+    return init(words)
+}
+
+module.exports.fromArray = function(array) {
+    return init(array);
+}
+
+module.exports.fromObject = function(obj) {
+    
+}
+
+const init = function(words) {
     words.forEach((word, wordIndex) => {
         word.split('').forEach((letter, letterIndex) => {
             dict[letterIndex] = dict[letterIndex] || {}; //to be changed in array or map;
@@ -14,7 +26,7 @@ module.exports.init = function() {
         dict[word.length] = dict[word.length] || {};
         dict[word.length]['.'] = dict[word.length]['.'] || new Set();
         dict[word.length]['.'].add(wordIndex);
-    })
+    });
 }
 
 const getMatches = function(word, startIndex) {
